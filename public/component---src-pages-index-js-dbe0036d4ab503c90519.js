@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkcasamucha=self.webpackChunkcasamucha||[]).push([[678],{704:function(e,a,n){n.r(a),n.d(a,{default:function(){return t}});var l=n(294);function t(){return l.createElement(l.Fragment,null,l.createElement("h1",null,"CASAMUCHA"),l.createElement("h3",null,"Guadalajara"),l.createElement("h3",null,"Fall 2021"))}}}]);
+//# sourceMappingURL=component---src-pages-index-js-dbe0036d4ab503c90519.js.map

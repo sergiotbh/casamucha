@@ -1,0 +1,28 @@
+{
+  "name": "casamucha",
+  "version": "1.0.0",
+  "description": "Casa Mucha Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sergiotbh/casamucha.git"
+  },
+  "author": "sergiotbh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sergiotbh/casamucha/issues"
+  },
+  "homepage": "https://github.com/sergiotbh/casamucha#readme",
+  "dependencies": {
+    "gatsby": "^3.13.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
+  }
+}

@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/sergiotbh/casamucha/issues"
   },
-  "homepage": "https://sergiotbh.github.io/casamucha",
+  "homepage": "https://casamucha.mx",
   "dependencies": {
     "gatsby": "^3.13.0",
     "gatsby-plugin-react-helmet": "^4.13.0",

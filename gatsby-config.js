@@ -1,3 +1,3 @@
 module.exports = {
-  pathPrefix: "sergiotbh.github.io/casamucha",
+  plugins: ['gatsby-plugin-postcss'],
 }

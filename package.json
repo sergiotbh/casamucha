@@ -16,13 +16,17 @@
   "bugs": {
     "url": "https://github.com/sergiotbh/casamucha/issues"
   },
-  "homepage": "https://github.com/sergiotbh/casamucha#readme",
+  "homepage": "https://sergiotbh.github.io/casamucha",
   "dependencies": {
     "gatsby": "^3.13.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "gh-pages": "^3.2.3"
+    "autoprefixer": "^10.3.4",
+    "gatsby-plugin-postcss": "^4.13.0",
+    "gh-pages": "^3.2.3",
+    "postcss": "^8.3.6",
+    "tailwindcss": "^2.2.14"
   }
 }

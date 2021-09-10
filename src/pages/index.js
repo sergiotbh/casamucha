@@ -9,15 +9,15 @@ export default function Home() {
         <title>Casa Mucha</title>
       </Helmet>
       <main>
-        <div class="relative m-auto flex flex-col justify-center  min-h-screen bg-grayBackground"
+        <div class="relative m-auto flex flex-col justify-center min-h-screen bg-grayBackground"
         >
           <div
-            className="absolute top-0 w-full h-full bg-center bg-cover bg-hero-pattern"
+            className="absolute top-0 w-full h-full bg-top lg:bg-cover bg-hero-pattern"
           >
-            <span id="blackOverlay" className="w-full h-full absolute opacity-40 bg-white"></span>
+            <span id="whiteOverlay" className="w-full h-full absolute opacity-40 bg-white"></span>
           </div>
-          <div className="container relative flex flex-col mx-auto items-center justify-center">
-            <img className="w-1/2" src={Logo} alt="Casa Mucha Logo"/>
+          <div className="relative flex flex-col mx-auto items-center justify-center h-1/2">
+            <img className="w-1/2 md:w-1/4" src={Logo} alt="Casa Mucha Logo"/>
             <h2 className="font-body mt-4 text-2xl text-gray-500">
               Guadalajara • Otoño 2021
             </h2>

@@ -12,7 +12,7 @@ module.exports = {
         'hero-pattern': "url('../assets/images/casamucha.jpg')"
       }),
       fontFamily: {
-        body: ['Merriweather']
+        body: ['Roboto Slab']
       }
     },
   },

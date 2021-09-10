@@ -1,26 +1,30 @@
 import React from "react"
-import Casamucha from "../assets/images/casamucha.jpg";
+import { Helmet } from "react-helmet";
 import Logo from "../assets/images/casamuchalogo.png";
 
 export default function Home() {
   return (
-    <main>
-      <div class="relative m-auto flex flex-col justify-between bg-grayBackground"
-        style={{
-          minHeight: "150vh"
-        }}
-      >
-        <div className="flex flex-col content-center items-center justify-center" style={{height: '100vh'}}>
-          <img className="w-1/2" src={Logo}/>
-          <h2 className="font-body mt-4 text-2xl text-gray-400">
-            Guadalajara • Otoño 2021
-          </h2>
+    <div>
+      <Helmet>
+        <title>Casa Mucha</title>
+      </Helmet>
+      <main>
+        <div class="relative m-auto flex flex-col justify-center  min-h-screen bg-grayBackground"
+        >
+          <div
+            className="absolute top-0 w-full h-full bg-center bg-cover bg-hero-pattern"
+          >
+            <span id="blackOverlay" className="w-full h-full absolute opacity-40 bg-white"></span>
+          </div>
+          <div className="container relative flex flex-col mx-auto items-center justify-center">
+            <img className="w-1/2" src={Logo} alt="Casa Mucha Logo"/>
+            <h2 className="font-body mt-4 text-2xl text-gray-500">
+              Guadalajara • Otoño 2021
+            </h2>
+          </div>
         </div>
-        <div
-          className="w-screen h-screen bg-center bg-no-repeat bg-hero-pattern"
-        />
-      </div>
-    </main>
+      </main>
+    </div>
   )
 }
 

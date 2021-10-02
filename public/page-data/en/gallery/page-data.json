@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-pages-gallery-js",
+    "path": "/en/gallery/",
+    "result": {"pageContext":{"language":"en","i18n":{"language":"en","languages":["es","en"],"defaultLanguage":"es","generateDefaultLanguagePage":false,"routed":true,"originalPath":"/gallery/","path":"en/gallery/"}}},
+    "staticQueryHashes": []}

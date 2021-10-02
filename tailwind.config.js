@@ -4,15 +4,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        grayBackground: {
-          DEFAULT: '#faf9f5'
-        }
+        grayBackground: '#faf9f5',
+        mediumBrown: '#AC886B',
+        
       },
       backgroundImage: theme => ({
         'hero-pattern': "url('../assets/images/casamucha.jpg')"
       }),
       fontFamily: {
-        body: ['Roboto Slab']
+        serif: ['Roboto Slab'],
+        sans: ['Source Sans Pro']
       }
     },
   },

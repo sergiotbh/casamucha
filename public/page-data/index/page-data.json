@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-pages-index-js",
     "path": "/",
-    "result": {"pageContext":{}},
+    "result": {"data":{"locales":{"edges":[{"node":{"ns":"translation","data":"{\"Home\":\"Inicio\",\"Gallery\":\"Galería\"}","language":"es"}}]}},"pageContext":{"language":"es","i18n":{"language":"es","languages":["es","en"],"defaultLanguage":"es","generateDefaultLanguagePage":false,"routed":false,"originalPath":"/","path":"/"}}},
     "staticQueryHashes": []}

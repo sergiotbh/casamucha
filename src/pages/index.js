@@ -1,11 +1,18 @@
+import { graphql } from "gatsby";
 import React from "react"
 import { Helmet } from "react-helmet";
+import { Trans, useTranslation } from "react-i18next";
 import Logo from "../assets/images/casamuchalogo.png";
+import Layout from "../components/Layout";
 
 export default function Home() {
+
+  const { t } = useTranslation()
+
   return (
-    <div>
-      <Helmet>
+    <Layout>
+      <h1><Trans>Gallery</Trans></h1>
+      {/* <Helmet>
         <title>Casa Mucha</title>
       </Helmet>
       <main>
@@ -24,7 +31,21 @@ export default function Home() {
             </h2>
           </div>
         </div>
-      </main>
-    </div>
+      </main> */}
+    </Layout>
   )
 }
+
+export const query = graphql`
+  query($language: String!) {
+    locales: allLocale(filter: {language: {eq: $language}}) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;

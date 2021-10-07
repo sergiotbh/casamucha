@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkcasamucha=self.webpackChunkcasamucha||[]).push([[822],{6182:function(e,a,u){u.r(a);var c=u(7294),n=u(7815);a.default=function(){return c.createElement(n.Z,null,c.createElement("h1",null,"GALLERY"))}}}]);
+//# sourceMappingURL=component---src-pages-gallery-js-cb13e8ec567e66e0eedf.js.map

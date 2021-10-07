@@ -3449,9 +3449,9 @@ var plugins = [{
   options: {
     "plugins": [],
     "localeJsonSourceName": "locale",
-    "languages": ["es", "en"],
+    "languages": ["es"],
     "defaultLanguage": "es",
-    "siteUrl": "https://example.com/",
+    "siteUrl": "https://casamucha.mx/",
     "i18nextOptions": {
       "interpolation": {
         "escapeValue": false

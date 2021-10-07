@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-pages-index-js",
-    "path": "/en/",
-    "result": {"data":{"locales":{"edges":[{"node":{"ns":"translation","data":"{\"Home\":\"Home\",\"Gallery\":\"Gall\"}","language":"en"}}]}},"pageContext":{"language":"en","i18n":{"language":"en","languages":["es","en"],"defaultLanguage":"es","generateDefaultLanguagePage":false,"routed":true,"originalPath":"/","path":"en/"}}},
-    "staticQueryHashes": []}

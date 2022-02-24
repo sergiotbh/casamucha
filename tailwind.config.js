@@ -37,6 +37,12 @@ module.exports = {
       },
       backgroundOpacity: {
         15: '0.15'
+      },
+      height: {
+        '629': '629px',
+      },
+      width: {
+        '478': '478px',
       }
     },
   },

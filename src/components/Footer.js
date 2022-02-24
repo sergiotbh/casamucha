@@ -1,8 +1,7 @@
 import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
-import IgIcon from '../assets/images/ig_icon.svg';
 import CasaMuchaLogoWhite from "../assets/images/casamucha_horizontal_white.svg";
-import { isMobile } from 'react-device-detect';
+import { PhotoCaption } from '../pages';
 import IconButton from './IconButton';
 
 const Footer = () => {
@@ -11,7 +10,8 @@ const Footer = () => {
       <section className="relative h-96 bg-brown-500 bg-opacity-75 py-8 px-5 md:py-16 md:pl-32 md:pr-56">
         <img
           src={CasaMuchaLogoWhite}
-          width={isMobile ? 243 : 343}
+          className="w-60 md:w-96"
+          alt="Casa Mucha"
         />
         <section className="md:flex py-14">
           <div className="pb-4 md:flex-grow">
@@ -42,10 +42,11 @@ const Footer = () => {
           </section>
         </section>
       </section>
-      <section>
+      <section className='relative'>
         <StaticImage
           src="../assets/images/casamucha.jpg"
         />
+        <PhotoCaption customStyle="absolute bottom-2 right-2 z-40">Ilustración: @licenciadodominguez</PhotoCaption>
       </section>
     </footer>
   )

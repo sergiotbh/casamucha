@@ -14,10 +14,11 @@ const IconButton = ({type}) => {
   const {icon, link, label} = buttonTypes[type]
 
   return(
-    <a aria-label={label} href={link} target="_blank">
+    <a aria-label={label} href={link} target="_blank" rel="noreferrer">
       <img
         className="hover:opacity-60" 
         src={icon}
+        alt={label}
       />
     </a>
   )

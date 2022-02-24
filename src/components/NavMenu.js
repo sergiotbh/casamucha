@@ -1,9 +1,8 @@
 import { Link } from 'gatsby';
 import React from 'react';
-import { useTranslation } from 'react-i18next';
+// import { useTranslation } from 'react-i18next';
 import CasaMuchaLogoWhite from "../assets/images/casamucha_horizontal_white.svg";
 import CloseIcon from "../assets/images/close_icon.svg";
-import { isMobile } from 'react-device-detect';
 import IconButton from './IconButton';
 
 const menuLinks = [
@@ -12,34 +11,47 @@ const menuLinks = [
     link: '/'
   },
   {
-    name: 'Gallery',
-    link: '/'
+    name: 'El Barrio',
+    link: '/el-barrio'
+  },
+  {
+    name: 'Muchas',
+    link: '/muchas'
+  },
+  {
+    name: 'La Recepción',
+    link: '/la-recepcion'
+  },
+  {
+    name: 'Abrazo',
+    link: '/abrazo'
   },
 ]
 
 const NavMenu = ({visible, onClose}) => {
 
-  const { t } = useTranslation()
+  // const { t } = useTranslation()
 
   return(
     <main className={`fixed h-screen w-screen inset-0 z-50 bg-brown-400 transition-opacity duration-300 bg-opacity-95 ${!visible ? 'invisible opacity-0' : 'visible opacity-100'}`}>
-      <section className="flex justify-between items-center py-7 px-5 md:px-32">
-        <Link className="w-6 md:w-12" to="/">
+      <section className="flex justify-between items-center py-7 px-8 md:px-28">
+        <Link className="w-6 md:w-8" to="/">
           <h1 className={`invisible font-bold text-sm md:text-base transition-colors text-white-default`}>Esp/Eng</h1>
         </Link>
         <Link to="/">
           <img
             src={CasaMuchaLogoWhite}
-            width={isMobile ? 250 : 389}
             placeholder="none"
-            className={`relative`}
+            className={`relative w-60 md:w-96`}
+            alt="Casa Mucha"
           />
         </Link>
         <button className="w-6 md:w-12"  aria-label="Open Nav Menu" onClick={() => onClose()}>
           <img
             src={CloseIcon}
-            width={isMobile ? 18 : 28}
+            className="w-5 md:w-7"
             placeholder="none"
+            alt="Close"
           />
         </button>
       </section>

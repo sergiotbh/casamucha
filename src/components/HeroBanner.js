@@ -1,9 +1,8 @@
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import React, { useEffect, useState } from 'react';
-import CasaMuchaLogoWhite from '../assets/images/casamucha_horizontal_white.svg';
-import { isMobile } from 'react-device-detect';
+import { PhotoCaption } from '../pages';
 
-const HeroBanner = ({images}) => {
+const HeroBanner = ({images, logoOverlay, noOverlay, photoCaption}) => {
 
   const [currentImage, setCurrentImage] = useState(0)
 
@@ -21,20 +20,18 @@ const HeroBanner = ({images}) => {
   };
 
   return(
-    <div className="relative w-screen h-screen">
+    <div className="relative h-screen">
       <GatsbyImage
         image={getImage(images[currentImage].node.childImageSharp)}
         fullWidth
         className="h-full"
       />
       <div
-        className="absolute top-0 z-40 flex justify-center items-center w-screen h-screen bg-black bg-opacity-40"
+        className={`absolute top-0 z-40 flex justify-center items-center w-full h-screen bg-black ${noOverlay ? "bg-opacity-0" : "bg-opacity-40"}`}
       >
-        <img
-          src={CasaMuchaLogoWhite}
-          width={isMobile ? 250 : 389}
-        />
+        {logoOverlay}
       </div>
+      <PhotoCaption dark={!noOverlay} customStyle="absolute bottom-2 right-2">{photoCaption}</PhotoCaption>
     </div>
   )
 }

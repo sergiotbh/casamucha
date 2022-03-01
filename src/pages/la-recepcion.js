@@ -4,7 +4,7 @@ import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image';
 import React, { useEffect } from 'react';
 import { PageSubtitle, Paragraph } from '.';
 import Layout from '../components/Layout';
-import RecepcionLogo from '../assets/images/la_recepcion_logo.svg';
+import RecepcionLogo from '../assets/images/recepcion_logo.svg';
 import Masonry from 'react-masonry-css'
 
 const RecepcionPage = ({data}) => {
@@ -18,27 +18,36 @@ const RecepcionPage = ({data}) => {
   return(
     <Layout noHero>
       <section className="px-12 pt-12 md:pl-16 lg:pl-32 md:pr-0 md:py-0">
-        <section className="md:flex pt-24 md:pt-48">
-          <section className="flex-grow md:flex md:flex-col justify-center mb-12 md:mb-0 mr-5">
-            {/* <PageTitle customStyle="mb-4 lg:mb-9 md:text-left">La Recepción</PageTitle> */}
+        <section className="md:flex pt-16 md:pt-28">
+          <section className="flex-grow md:flex md:flex-col lg:justify-center items-center mb-12 md:mb-0 mr-5">
             <img
               src={RecepcionLogo}
               alt="Logo Recepcion"
+              className="w-40 md:w-56 mb-8 mx-auto"
             />
-            <Paragraph customStyle="md:text-left md:max-w-md">En La Recepción puedes comprar arte y artículos utilitarios que reflejan la inspiración de Casa Mucha.</Paragraph>
+            <Paragraph customStyle="md:max-w-md mb-10">
+              La Recepción es una tienda donde podrás encontrar arte y artículos utilitarios que reflejan la inspiración de Casa Mucha.
+              Donde nuestros artistas favoritos cuentan sus historias y tú te podrás llevar un pedacito de ellas.
+            </Paragraph>
           </section>
           <StaticImage
             src="../assets/images/recepcion_01.jpeg"
             width={709}
-            height={500}
+            height={450}
             />
         </section>
-        <StaticImage
-          src="../assets/images/recepcion_02.jpeg"
-          width={709}
-          height={500}
-          className="mt-10 md:ml-24 md:-mt-10 md:w-1/2"
-        />
+        <section className="grid md:grid-cols-5 md:flex-row items-center">
+          <StaticImage
+            src="../assets/images/recepcion_02.jpeg"
+            width={709}
+            height={450}
+            className="flex-grow mt-10 md:ml-18 md:-mt-5 xl:-mt-24 col-span-3"
+          />
+          <Paragraph customStyle="col-span-2 p-8 xl:py-0 lg:-mt-12 xl:-mt-24 lg:px-12">
+            Nuestra recepción es el lugar donde podremos conocernos mejor y te daremos recomendaciones acerca 
+            de lo que hay en el barrio para que te enamores de Guadalajara tanto como nosotros.
+          </Paragraph>
+        </section>
       </section>
       <section className="flex justify-center mx-12 py-12">
         <PageSubtitle customStyle="text-center">Conoce más de nuestros productos aquí</PageSubtitle>
@@ -51,7 +60,7 @@ const RecepcionPage = ({data}) => {
             <div data-aos="fade-in" className={``} key={i}>
               <GatsbyImage
                 image={getImage(v.node.childImageSharp)}
-                className="m-5"
+                className="m-1 md:m-2"
               />
             </div>
           )

@@ -8,10 +8,11 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 
 const AbrazoPage = ({data}) => {
-  
-  const [offsetY, setOffsetY] = useState(window.pageYOffset)
+  const isBrowser = typeof window !== "undefined"
 
-  const handleScroll = () => setOffsetY(window.pageYOffset)
+  const [offsetY, setOffsetY] = useState(isBrowser ? window.pageYOffset : 0)
+
+  const handleScroll = () => setOffsetY(isBrowser ? window.pageYOffset : 0)
   
   useEffect(() => {
     Aos.init({
@@ -71,7 +72,7 @@ const AbrazoPage = ({data}) => {
             src="../assets/images/abrazo_vertical.JPG"
             width={619}
             height={928}
-            className="rounded-t-full max-w-xs lg:max-w-full"
+            className="rounded-t-full max-w-xs lg:max-w-full transform"
           />
           <div
             className="absolute margin-auto transform -top-24 md:-top-36 lg:-top-40 -right-4 md:-right-12 lg:-right-20 h-40 w-40 lg:h-64 lg:w-64"
@@ -83,9 +84,10 @@ const AbrazoPage = ({data}) => {
               src="../assets/images/abrazo_special.JPG"
               width={250}
               height={250}
+              className="rounded-full shadow-md transform"
               aspectRatio={1}
-              className="rounded-full shadow-md"
             />
+            
           </div>
         </div>
       </section>

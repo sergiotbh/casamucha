@@ -30,8 +30,8 @@ const MuchasPage = ({data}) => {
         }
       />
       <section data-aos="fade-in" className="flex my-16 justify-center">
-        <Paragraph customStyle="w-3/4 md:w-1/3 text-center">
-          Es una marca colectiva de creaciones de personas que pertenecen a alguna de las comunidades que históricamente han sido juzgadas y amenazadas por el simple hecho de ser quienes son. 
+        <Paragraph customStyle="w-3/4 md:w-1/2 text-center">
+          Es una marca colectiva de creaciones de personas que pertenecen a alguna de las comunidades que históricamente han sido juzgadas y amenazadas por el simple hecho de ser quienes son.  Conservamos la historia de sus obras y te invitamos a seguir escribiéndola. 
         </Paragraph>
       </section>
       <section data-aos="fade-up" className="py-12 md:pt-16 md:pb-20 px-12 md:px-36 bg-brown-200 bg-opacity-10 grid lg:grid-cols-3 gap-12 lg:gap-5 ">
@@ -63,19 +63,20 @@ const MuchasPage = ({data}) => {
         </section>
         <section className="col-span-1 flex flex-col justify-center row-start-1">
           <PageSubtitle customStyle="text-center mb-4">PRODUCTOS DE NUESTROS ARTESANOS</PageSubtitle>
-          <Paragraph>Es una marca colectiva de creaciones de personas que pertenecen a alguna de las comunidades que históricamente han sido juzgadas y amenazadas por el simple hecho de ser quienes son.</Paragraph>
+          <Paragraph>Desde obras de arte popular hasta artículos utilitarios que transforman cualquier espacio en tu Casa.</Paragraph>
         </section>
       </section>
       <section data-aos="fade-up" className="py-12 md:pt-16 md:pb-20 px-12 md:px-36 grid lg:grid-cols-3 gap-12 lg:gap-5">
         <section className="col-span-1 flex flex-col justify-center">
           <PageSubtitle customStyle="text-center mb-4">NUESTRAS MANOS</PageSubtitle>
-          <Paragraph>Es una marca colectiva de creaciones de personas que pertenecen a alguna de las comunidades que históricamente han sido juzgadas y amenazadas por el simple hecho de ser quienes son.</Paragraph>
+          <Paragraph>Muchas es una labor conjunta entre artesanos y curadores, colaboramos de manera justa para que el beneficio sea de todos.</Paragraph>
         </section>
         <section className="col-span-1">
           <StaticImage
             src="../assets/images/muchas_08.jpeg"
             quality={75}
             alt="Plato"
+            className="h-full"
           />
         </section>
         <section className="col-span-1">
@@ -83,6 +84,7 @@ const MuchasPage = ({data}) => {
             src="../assets/images/muchas_06.jpeg"
             quality={75}
             alt="Pineapple"
+            className="h-full"
           />
         </section>
       </section>

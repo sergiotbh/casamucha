@@ -4,9 +4,11 @@ import Footer from './Footer';
 import Header from './Header';
 
 const Layout = ({children, noHero}) => {
-  const [offsetY, setOffsetY] = useState(window.pageYOffset)
+  const isBrowser = typeof window !== "undefined"
 
-  const handleScroll = () => setOffsetY(window.pageYOffset)
+  const [offsetY, setOffsetY] = useState(isBrowser ? window.pageYOffset : 0)
+
+  const handleScroll = () => setOffsetY(isBrowser ? window.pageYOffset : 0)
   
   useEffect(() => {
     window.addEventListener('scroll', handleScroll )

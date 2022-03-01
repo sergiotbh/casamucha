@@ -7,35 +7,9 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import MuchasLogo from '../assets/images/muchas_logo.svg'
 import CasaMuchaLogoWhite from '../assets/images/casamucha_horizontal_white.svg';
-import RecepcionLogo from '../assets/images/la_recepcion_logo.svg';
-import SalonLogo from '../assets/images/el_salon_logo.svg';
+import RecepcionLogo from '../assets/images/recepcion_logo.svg';
+import SalonLogo from '../assets/images/salon_logo.svg';
 import RinTinTinLogo from '../assets/images/rintintin_logo.svg'
-
-const partners = [
-  {
-    name: "La Recepción",
-    logo: RecepcionLogo,
-    link: "/la-recepcion"
-  },
-  {
-    name: "Muchas",
-    logo: MuchasLogo,
-    link: "/muchas"
-  },
-  {
-    name: "Rin Tin Tin",
-    logo: RinTinTinLogo,
-    link: "https://www.instagram.com/caferintintin"
-  },
-  {
-    name: "El Salón",
-    logo: SalonLogo,
-  },
-  {
-    name: "Abrazo",
-    link: "/abrazo"
-  }
-]
 
 export default function Home({data}) {
 
@@ -64,6 +38,7 @@ export default function Home({data}) {
           <StaticImage
             src="../assets/images/casa_mucha_home_graphic_01.jpg"
             width={609}
+            height={500}
           />
         </div>
         <div className="flex flex-col justify-center md:col-span-4 px-6 py-11" data-aos="fade-right">
@@ -96,32 +71,39 @@ export default function Home({data}) {
           aspectRatio={1}
         />
       </section>
-      <section className="flex flex-wrap justify-center items-center pt-16 px-10 lg:px-44 py-11 bg-brown-200 bg-opacity-15">
-        {
-          partners.map((v, i) => v.link && v.link.includes('http') ? (
-            <a href={v.link} target='_blank' key={i} className="w-full md:w-1/2 lg:w-1/3 px-3 items-center">
-              {
-              v.logo ? 
-                <img
-                  src={v.logo}
-                  alt=""
-                /> :
-                <h3 className="text-6xl leading-loose tracking-wide text-brown-500 font-serif text-center">{v.name}</h3>
-              }
-            </a>
-          ) : (
-            <Link to={v.link} className="w-full md:w-1/2 lg:w-1/3 px-3 items-center">
-              {
-              v.logo ? 
-                <img
-                  src={v.logo}
-                  alt=""
-                /> :
-                <h3 className="text-6xl leading-loose tracking-wide text-brown-500 font-serif text-center">{v.name}</h3>
-              }
-            </Link>
-          ))
-        }
+      <section className="flex flex-wrap justify-center md:justify-between items-center pt-16 py-11 px-14 xl:px-32 bg-brown-200 bg-opacity-15">
+        <Link to="/la-recepcion" className=" lg:py-2 lg:px-4 px-10 py-12 items-center">
+          <img
+            src={RecepcionLogo}
+            alt=""
+            height={20}
+            width={150}
+          />
+        </Link>
+        <Link href="/muchas" className=" px-12 py-12 lg:px-2 lg:py-2 items-center">
+          <img
+            src={MuchasLogo}
+            alt=""
+            height={20}
+            width={150}
+          />
+        </Link>
+        <a href="https://www.instagram.com/caferintintin" target='_blank' className="px-12 py-12 lg:px-2 lg:py-2 justify-center items-center">
+          <img
+            src={RinTinTinLogo}
+            alt=""
+            height={20}
+            width={150}
+          />
+        </a>
+        <a href="/el-salon" className="px-10 py-10 lg:px-4 lg:py-2 justify-center items-center">
+          <img
+            src={SalonLogo}
+            alt=""
+            height={20}
+            width={105}
+          />
+        </a>
       </section>
     </Layout>
   )

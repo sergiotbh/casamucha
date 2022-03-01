@@ -46,7 +46,7 @@ const NavMenu = ({visible, onClose}) => {
             alt="Casa Mucha"
           />
         </Link>
-        <button className="w-6 md:w-12"  aria-label="Open Nav Menu" onClick={() => onClose()}>
+        <button className="w-6 md:w-12 p-1"  aria-label="Open Nav Menu" onClick={() => onClose()}>
           <img
             src={CloseIcon}
             className="w-5 md:w-7"

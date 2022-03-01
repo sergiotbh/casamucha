@@ -3,7 +3,7 @@ import { graphql } from "gatsby";
 import HeroBanner from '../components/HeroBanner';
 import Layout from '../components/Layout';
 import MuchasLogoWhite from '../assets/images/muchas_logo_white.svg';
-import { PageSubtitle, Paragraph } from './index';
+import { PageSubtitle, Paragraph } from '../components/TextComponents'
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { StaticImage } from 'gatsby-plugin-image';
@@ -37,7 +37,7 @@ const MuchasPage = ({data}) => {
       <section data-aos="fade-up" className="py-12 md:pt-16 md:pb-20 px-12 md:px-36 bg-brown-200 bg-opacity-10 grid lg:grid-cols-3 gap-12 lg:gap-5 ">
         <section className="col-span-1">
           <StaticImage
-            src="../assets/images/muchas_05.jpeg"
+            src="../assets/images/muchas_05.jpg"
             quality={75}
             alt="Dog"
             className="h-full"
@@ -45,19 +45,19 @@ const MuchasPage = ({data}) => {
         </section>
         <section className="col-span-1 grid grid-cols-2 grid-rows-2 gap-5">
           <StaticImage
-            src="../assets/images/muchas_02.jpeg"
+            src="../assets/images/muchas_02.jpg"
             alt="Dogs"
           />
           <StaticImage
-            src="../assets/images/muchas_03.jpeg"
+            src="../assets/images/muchas_03.jpg"
             alt="Palma"
           />
           <StaticImage
-            src="../assets/images/muchas_01.jpeg"
+            src="../assets/images/muchas_01.jpg"
             alt="Cesto"
           />
           <StaticImage
-            src="../assets/images/muchas_04.jpeg"
+            src="../assets/images/muchas_04.jpg"
             alt="Dog"
           />
         </section>
@@ -73,7 +73,7 @@ const MuchasPage = ({data}) => {
         </section>
         <section className="col-span-1">
           <StaticImage
-            src="../assets/images/muchas_08.jpeg"
+            src="../assets/images/muchas_08.jpg"
             quality={75}
             alt="Plato"
             className="h-full"
@@ -81,7 +81,7 @@ const MuchasPage = ({data}) => {
         </section>
         <section className="col-span-1">
           <StaticImage
-            src="../assets/images/muchas_06.jpeg"
+            src="../assets/images/muchas_06.jpg"
             quality={75}
             alt="Pineapple"
             className="h-full"
@@ -117,7 +117,7 @@ export const query = graphql`
           childImageSharp{
             gatsbyImageData(
               width: 2000
-              placeholder: BLURRED
+              placeholder: DOMINANT_COLOR
               formats: [AUTO, WEBP, AVIF]
               quality: 90
             )
@@ -125,7 +125,7 @@ export const query = graphql`
       }
       }
     }
-    muchasBackground: file(relativePath: { eq: "muchas_banner.jpeg" }) {
+    muchasBackground: file(relativePath: { eq: "muchas_banner.jpg" }) {
       childImageSharp {
         fluid(quality: 100, maxWidth: 4160, grayscale: true) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG

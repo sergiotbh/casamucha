@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { PageSubtitle, PageTitle, Paragraph, PhotoCaption } from './index';
+import { PageSubtitle, PageTitle, Paragraph, PhotoCaption } from '../components/TextComponents';
 import Layout from '../components/Layout';
 import { StaticImage } from 'gatsby-plugin-image';
 import Aos from "aos";

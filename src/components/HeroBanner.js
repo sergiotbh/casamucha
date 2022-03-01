@@ -1,6 +1,6 @@
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import React, { useEffect, useState } from 'react';
-import { PhotoCaption } from '../pages';
+import { PhotoCaption } from './TextComponents';
 
 const HeroBanner = ({images, logoOverlay, noOverlay, photoCaption}) => {
 

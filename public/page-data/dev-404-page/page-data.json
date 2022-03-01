@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---cache-dev-404-page-js",
+    "path": "/dev-404-page/",
+    "result": {"data":{"allSiteFunction":{"nodes":[]},"allSitePage":{"nodes":[{"path":"/abrazo/"},{"path":"/el-barrio/"},{"path":"/el-salon/"},{"path":"/gallery/"},{"path":"/"},{"path":"/la-recepcion/"},{"path":"/muchas/"}]}},"pageContext":{"language":"es","i18n":{"language":"es","languages":["es"],"defaultLanguage":"es","generateDefaultLanguagePage":false,"routed":false,"originalPath":"/dev-404-page/","path":"/dev-404-page/"}}},
+    "staticQueryHashes": []}

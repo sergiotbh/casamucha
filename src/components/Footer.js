@@ -1,8 +1,8 @@
 import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 import CasaMuchaLogoWhite from "../assets/images/casamucha_horizontal_white.svg";
-import { PhotoCaption } from '../pages';
 import IconButton from './IconButton';
+import { PhotoCaption } from './TextComponents';
 
 const Footer = () => {
   return(

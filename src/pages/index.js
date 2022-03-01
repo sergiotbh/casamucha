@@ -1,6 +1,6 @@
+import React, { useEffect } from "react"
 import { graphql, Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
-import React, { useEffect } from "react"
 import HeroBanner from "../components/HeroBanner";
 import Layout from "../components/Layout";
 import Aos from "aos";
@@ -10,8 +10,9 @@ import CasaMuchaLogoWhite from '../assets/images/casamucha_horizontal_white.svg'
 import RecepcionLogo from '../assets/images/recepcion_logo.svg';
 import SalonLogo from '../assets/images/salon_logo.svg';
 import RinTinTinLogo from '../assets/images/rintintin_logo.svg'
+import { PageTitle, Paragraph } from "../components/TextComponents";
 
-export default function Home({data}) {
+function Home({data}) {
 
   useEffect(() => {
     Aos.init({
@@ -88,7 +89,7 @@ export default function Home({data}) {
             width={150}
           />
         </Link>
-        <a href="https://www.instagram.com/caferintintin" target='_blank' className="px-12 py-12 lg:px-2 lg:py-2 justify-center items-center">
+        <a href="https://www.instagram.com/caferintintin" target="_blank" rel="noreferrer" className="px-12 py-12 lg:px-2 lg:py-2 justify-center items-center">
           <img
             src={RinTinTinLogo}
             alt=""
@@ -108,28 +109,6 @@ export default function Home({data}) {
     </Layout>
   )
 }
-
-export const PageTitle = ({children, customStyle}) => (
-  <h1 className={`font-serif text-brown-300 text-4xl text-center md:text-left lg:text-7xl leading-tight tracking-wider ${customStyle}`}>{children}</h1>
-)
-
-export const PageSubtitle = ({children, customStyle}) => (
-  <h2 className={`font-sans text-2xl lg:text-4xl tracking-normal leading-snug font-light text-brown-300 ${customStyle}`}>
-    {children}
-  </h2>
-)
-
-export const Paragraph = ({children, customStyle, alignParagraph}) => (
-  <p
-    className={`${alignParagraph ? 'text-left' : 'text-center'} text-sm md:text-base text-brown-600 font-light leading-loose tracking-wide ${customStyle}`}
-  >
-    {children}
-  </p>
-)
-
-export const PhotoCaption = ({children, dark, customStyle}) => (
-  <h6 className={`${customStyle} ${dark ? 'text-gray-300' : 'text-brown-600'} z-40 italic text-xs md:text-sm`}>{children}</h6>
-)
 
 export const query = graphql`
   query{
@@ -152,3 +131,5 @@ export const query = graphql`
     }
   }
 `;
+
+export default Home;

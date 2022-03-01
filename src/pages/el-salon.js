@@ -3,7 +3,7 @@ import React from 'react';
 import HeroBanner from '../components/HeroBanner';
 import Layout from '../components/Layout';
 import ElSalonLogoWhite from '../assets/images/el_salon_logo_white.svg'
-import { PageSubtitle } from '.';
+import { PageSubtitle } from '../components/TextComponents';
 import { StaticImage } from 'gatsby-plugin-image';
 
 const SalonPage = ({data}) => {
@@ -31,7 +31,7 @@ const SalonPage = ({data}) => {
             El Salón es un espacio para que las personas compartan sus saberes, oficios y creaciones.
           </PageSubtitle>
           <StaticImage
-            src="../assets/images/muchas_07.jpeg"
+            src="../assets/images/muchas_07.jpg"
             width={478}
             height={629}
           />
@@ -40,13 +40,13 @@ const SalonPage = ({data}) => {
           className="col-span-7"
         >
           <StaticImage
-            src="../assets/images/muchas_06.jpeg"
+            src="../assets/images/muchas_06.jpg"
             width={589}
             height={393}
             className="mb-12 shadow-lg"
           />
           <StaticImage
-            src="../assets/images/muchas_05.jpeg"
+            src="../assets/images/muchas_05.jpg"
             width={709}
             height={629}
           />

@@ -2,7 +2,7 @@ import Aos from 'aos';
 import { graphql } from 'gatsby';
 import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image';
 import React, { useEffect } from 'react';
-import { PageSubtitle, Paragraph } from '.';
+import { PageSubtitle, Paragraph } from '../components/TextComponents';
 import Layout from '../components/Layout';
 import RecepcionLogo from '../assets/images/recepcion_logo.svg';
 import Masonry from 'react-masonry-css'
@@ -31,14 +31,14 @@ const RecepcionPage = ({data}) => {
             </Paragraph>
           </section>
           <StaticImage
-            src="../assets/images/recepcion_01.jpeg"
+            src="../assets/images/recepcion_01.jpg"
             width={709}
             height={450}
             />
         </section>
         <section className="grid md:grid-cols-5 md:flex-row items-center">
           <StaticImage
-            src="../assets/images/recepcion_02.jpeg"
+            src="../assets/images/recepcion_02.jpg"
             width={709}
             height={450}
             className="flex-grow mt-10 md:ml-18 md:-mt-5 xl:-mt-24 col-span-3"

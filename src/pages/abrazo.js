@@ -40,7 +40,7 @@ const AbrazoPage = ({data}) => {
           </div>
           <div className="lg:hidden">
             <StaticImage
-              src="../assets/images/abrazo/abrazo_4.JPG"
+              src="../assets/images/abrazo/abrazo_4.jpg"
               width={400}
               height={600}
               layout="fullWidth"
@@ -48,7 +48,7 @@ const AbrazoPage = ({data}) => {
           </div>
           <div className="absolute -top-24 md:-top-32 z-0 flex w-screen lg:w-1/3 justify-center lg:pl-12">
             <StaticImage
-              src="../assets/images/abrazo_special3.JPG"
+              src="../assets/images/abrazo_special3.jpg"
               width={250}
               height={250}
               className="margin-auto rounded-full transform shadow-md"
@@ -69,7 +69,7 @@ const AbrazoPage = ({data}) => {
       <section className="flex justify-center">
         <div className="relative mx-4">
           <StaticImage
-            src="../assets/images/abrazo_vertical.JPG"
+            src="../assets/images/abrazo_vertical.jpg"
             width={619}
             height={928}
             className="rounded-t-full max-w-xs lg:max-w-full transform"
@@ -81,7 +81,7 @@ const AbrazoPage = ({data}) => {
             }}
           >
             <StaticImage
-              src="../assets/images/abrazo_special.JPG"
+              src="../assets/images/abrazo_special.jpg"
               width={250}
               height={250}
               className="rounded-full shadow-md transform"
@@ -99,7 +99,7 @@ const AbrazoPage = ({data}) => {
               La producción artística de Gabriel Rosas Alemán (Ciudad de México, 1983) explora los medios de la escultura, pintura, performance y video para plantear diversas traducciones entre los planos intangible y concreto. Para ello, revisa problemáticas relacionadas con el arte moderno, tales como la centralidad del pensamiento sobre la forma, la atención al comportamiento de los materiales y la exploración de diversos mecanismos para la composición.
             </Paragraph>
             <StaticImage
-              src="../assets/images/abrazo/abrazo_3.JPG"
+              src="../assets/images/abrazo/abrazo_3.jpg"
               width={478}
               height={629}
               className="lg:h-629 lg:w-478"
@@ -111,7 +111,7 @@ const AbrazoPage = ({data}) => {
               className="max-w-xl mb-8 lg:mb-14"
             />
             <StaticImage
-              src="../assets/images/abrazo/abrazo_2.JPG"
+              src="../assets/images/abrazo/abrazo_2.jpg"
               width={709}
               height={630}
             />

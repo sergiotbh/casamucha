@@ -18,7 +18,7 @@ const MuchasPage = ({data}) => {
   }, [])
 
   return(
-    <Layout>
+    <Layout title="Muchas" description="Es una marca colectiva de creaciones de personas que pertenecen a diferentes comunidades.">
       <HeroBanner
         images={data.muchasHero.edges}
         logoOverlay={

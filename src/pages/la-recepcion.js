@@ -16,7 +16,7 @@ const RecepcionPage = ({data}) => {
   }, [])
 
   return(
-    <Layout noHero>
+    <Layout noHero title="La Recepción" description="La Recepción es una tienda donde podrás encontrar arte y artículos utilitarios que reflejan la inspiración de Casa Mucha.">
       <section className="px-12 pt-12 md:pl-16 lg:pl-32 md:pr-0 md:py-0">
         <section className="md:flex pt-16 md:pt-28">
           <section className="flex-grow md:flex md:flex-col lg:justify-center items-center mb-12 md:mb-0 mr-5">

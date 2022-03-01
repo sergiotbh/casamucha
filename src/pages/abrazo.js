@@ -25,7 +25,7 @@ const AbrazoPage = ({data}) => {
   }, [])
   
   return(
-    <Layout noHero>
+    <Layout noHero title="Abrazo" description="Abrazo es una escultura que recibe y que invita al espectador a permanecer entre sus volúmenes.">
       <section className='pt-14 md:pt-36'>
         <div className='flex h-48 justify-center items-center mb-11 md:mb-20'>
           <h1 className={`font-serif text-brown-300 text-4xl text-center md:text-6xl lg:text-7xl leading-tight tracking-wider`}>Abrazo</h1>

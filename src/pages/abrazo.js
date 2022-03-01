@@ -1,7 +1,7 @@
 import { graphql } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import React, { useEffect, useState } from 'react';
-import { PageTitle, Paragraph, PhotoCaption } from '.';
+import { PageTitle, Paragraph, PhotoCaption } from '../components/TextComponents';
 import HeroBanner from '../components/HeroBanner';
 import Layout from '../components/Layout';
 import Aos from "aos";

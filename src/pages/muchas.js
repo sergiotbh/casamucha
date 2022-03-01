@@ -37,7 +37,7 @@ const MuchasPage = ({data}) => {
       <section data-aos="fade-up" className="py-12 md:pt-16 md:pb-20 px-12 md:px-36 bg-brown-200 bg-opacity-10 grid lg:grid-cols-3 gap-12 lg:gap-5 ">
         <section className="col-span-1">
           <StaticImage
-            src="../assets/images/muchas_01.jpeg"
+            src="../assets/images/muchas_05.jpeg"
             quality={75}
             alt="Dog"
             className="h-full"
@@ -53,11 +53,11 @@ const MuchasPage = ({data}) => {
             alt="Palma"
           />
           <StaticImage
-            src="../assets/images/muchas_04.jpeg"
+            src="../assets/images/muchas_01.jpeg"
             alt="Cesto"
           />
           <StaticImage
-            src="../assets/images/muchas_05.jpeg"
+            src="../assets/images/muchas_04.jpeg"
             alt="Dog"
           />
         </section>

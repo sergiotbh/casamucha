@@ -1,17 +1,24 @@
 module.exports = {
-  // siteMetadata: {
-  //   title: 'Casa Mucha',
-  //   menuLinks: [
-  //     {
-  //       name: 'Home',
-  //       link: '/'
-  //     },
-  //     {
-  //       name: 'Gallery',
-  //       link: '/gallery'
-  //     }
-  //   ]
-  // },
+  siteMetadata: {
+    url: 'https://casamucha.mx',
+    title: 'Casa Mucha',
+    description: 'Somos una estancia y espacio creativo en el corazón de Guadalajara. Casa Mucha es el encuentro de barrios e ideas de nuestra ciudad, con puertas abiertas para todas las personas que buscan disfrutarla.',
+    image: './src/assets/images/casa_mucha_home_graphic_01.jpg',
+    menuLinks: [
+      {
+        name: 'El Barrio',
+        link: '/el-barrio'
+      },
+      {
+        name: 'La Recepcion',
+        link: '/la-recepcion'
+      },
+      {
+        name: 'Muchas',
+        link: '/muchas'
+      }
+    ]
+  },
   plugins: [
     'gatsby-plugin-postcss', 
     `gatsby-plugin-react-helmet`,

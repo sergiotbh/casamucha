@@ -1,9 +1,10 @@
+import { graphql, useStaticQuery } from 'gatsby';
 import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import Footer from './Footer';
 import Header from './Header';
 
-const Layout = ({children, noHero}) => {
+const Layout = ({children, noHero, title, url, description}) => {
   const isBrowser = typeof window !== "undefined"
 
   const [offsetY, setOffsetY] = useState(isBrowser ? window.pageYOffset : 0)
@@ -16,12 +17,36 @@ const Layout = ({children, noHero}) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [])
 
+  const data = useStaticQuery(graphql`
+  {
+    site {
+      siteMetadata {
+        url
+        title
+        description
+        image
+      }
+    }
+  }
+`);
+
+  const defaults = data.site.siteMetadata;
+
+  const seo = {
+    title: title || defaults.title,
+    description: description || defaults.description,
+    image: defaults.image,
+    url: url || defaults.url
+  };
+
   return(
     <main className="bg-white-background">
       <Background
         offsetY={offsetY}
       />
       <Helmet>
+        <meta name="description" content={seo.description} />
+        <meta name="image" content={seo.image} />
         <title>Casa Mucha</title>
       </Helmet>
       <Header

@@ -68,7 +68,7 @@ function Home({data}) {
           src="../assets/images/casa_mucha_home_square.jpg"
           width={225}
           height={225}
-          className="margin-auto rounded-full transform lg:-translate-y-40 shadow-md"
+          className="margin-auto rounded-full lg:-translate-y-40 shadow-md"
           aspectRatio={1}
         />
       </section>

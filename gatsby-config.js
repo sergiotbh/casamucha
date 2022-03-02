@@ -77,6 +77,18 @@ module.exports = {
         ],
         display: 'swap'
       }
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: "Casa Mucha",
+        short_name: "Casa Mucha",
+        start_url: "/",
+        background_color: "#faf9f5",
+        theme_color: "#AC886B",
+        display: "browser",
+        icon: "./src/assets/images/favicon/favicon-32x32.png",
+      },
     }
   ],
 }

@@ -11,7 +11,7 @@ const Header = ({isTransparent, noHero}) => {
   
   return(
     <nav 
-      className={`transition-colors duration-500 ease-out ${isTransparent ? 'bg-transparent' : 'bg-white-background shadow'} flex flex-row justify-between py-7 px-5 md:px-28 w-full fixed top-0 z-50`}
+      className={`transition-colors duration-500 ease-out ${isTransparent ? 'bg-transparent' : 'bg-white-background shadow'} flex flex-row justify-between items-center py-7 px-5 md:px-28 w-full fixed top-0 z-50`}
     >
       <Link className="w-6 md:w-12" to="/">
         <h1 className={`invisible font-bold text-sm md:text-base transition-colors ${!noHero && isTransparent ? 'text-white-default' : 'text-black'}`}>Esp/Eng</h1>
@@ -19,12 +19,12 @@ const Header = ({isTransparent, noHero}) => {
       <Link to="/">
         <img
           src={CasaMuchaLogoBlack}
-          className={`w-60 md:w-96 relative transition transform ${!noHero && isTransparent ? 'opacity-0 translate-y-16' : 'opacity-100 translate-y-0'}`}
+          className={`xs:w-52 w-60 md:w-96 relative transition transform ${!noHero && isTransparent ? 'opacity-0 translate-y-16' : 'opacity-100 translate-y-0'}`}
           placeholder="none"
           alt="Casa Mucha"
         />
       </Link>
-      <button className="w-6 md:w-12"  aria-label="Open Nav Menu" onClick={() => setIsMenuVisible(!isMenuVisible)}>
+      <button className="xs:w-4 w-6 md:w-12"  aria-label="Open Nav Menu" onClick={() => setIsMenuVisible(!isMenuVisible)}>
         <img
           src={!noHero && isTransparent ? BurgerIconWhite : BurgerIcon}
           className="w-5 md:w-7"

@@ -41,9 +41,9 @@ const Layout = ({children, noHero, title, url, description}) => {
 
   return(
     <main className="bg-white-background">
-      <Background
+     {isBrowser && window.innerWidth > 375 && <Background
         offsetY={offsetY}
-      />
+      />}
       <Helmet>
         <meta name="description" content={seo.description} />
         <meta name="image" content={seo.image} />

@@ -1,17 +1,18 @@
 import { graphql } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import React, { useEffect, useState } from 'react';
-import { PageTitle, Paragraph, PhotoCaption } from '.';
+import { PageTitle, Paragraph, PhotoCaption } from '../components/TextComponents';
 import HeroBanner from '../components/HeroBanner';
 import Layout from '../components/Layout';
 import Aos from "aos";
 import "aos/dist/aos.css";
 
 const AbrazoPage = ({data}) => {
-  
-  const [offsetY, setOffsetY] = useState(window.pageYOffset)
+  const isBrowser = typeof window !== "undefined"
 
-  const handleScroll = () => setOffsetY(window.pageYOffset)
+  const [offsetY, setOffsetY] = useState(isBrowser ? window.pageYOffset : 0)
+
+  const handleScroll = () => setOffsetY(isBrowser ? window.pageYOffset : 0)
   
   useEffect(() => {
     Aos.init({
@@ -24,7 +25,7 @@ const AbrazoPage = ({data}) => {
   }, [])
   
   return(
-    <Layout noHero>
+    <Layout noHero title="Abrazo" description="Abrazo es una escultura que recibe y que invita al espectador a permanecer entre sus volúmenes.">
       <section className='pt-14 md:pt-36'>
         <div className='flex h-48 justify-center items-center mb-11 md:mb-20'>
           <h1 className={`font-serif text-brown-300 text-4xl text-center md:text-6xl lg:text-7xl leading-tight tracking-wider`}>Abrazo</h1>
@@ -39,7 +40,7 @@ const AbrazoPage = ({data}) => {
           </div>
           <div className="lg:hidden">
             <StaticImage
-              src="../assets/images/abrazo/abrazo_4.JPG"
+              src="../assets/images/abrazo/abrazo_4.jpg"
               width={400}
               height={600}
               layout="fullWidth"
@@ -47,7 +48,7 @@ const AbrazoPage = ({data}) => {
           </div>
           <div className="absolute -top-24 md:-top-32 z-0 flex w-screen lg:w-1/3 justify-center lg:pl-12">
             <StaticImage
-              src="../assets/images/abrazo_special3.JPG"
+              src="../assets/images/abrazo_special3.jpg"
               width={250}
               height={250}
               className="margin-auto rounded-full transform shadow-md"
@@ -68,10 +69,10 @@ const AbrazoPage = ({data}) => {
       <section className="flex justify-center">
         <div className="relative mx-4">
           <StaticImage
-            src="../assets/images/abrazo_vertical.JPG"
+            src="../assets/images/abrazo_vertical.jpg"
             width={619}
             height={928}
-            className="rounded-t-full max-w-xs lg:max-w-full"
+            className="rounded-t-full max-w-xs lg:max-w-full transform"
           />
           <div
             className="absolute margin-auto transform -top-24 md:-top-36 lg:-top-40 -right-4 md:-right-12 lg:-right-20 h-40 w-40 lg:h-64 lg:w-64"
@@ -80,12 +81,13 @@ const AbrazoPage = ({data}) => {
             }}
           >
             <StaticImage
-              src="../assets/images/abrazo_special.JPG"
+              src="../assets/images/abrazo_special.jpg"
               width={250}
               height={250}
+              className="rounded-full shadow-md transform"
               aspectRatio={1}
-              className="rounded-full shadow-md"
             />
+            
           </div>
         </div>
       </section>
@@ -97,7 +99,7 @@ const AbrazoPage = ({data}) => {
               La producción artística de Gabriel Rosas Alemán (Ciudad de México, 1983) explora los medios de la escultura, pintura, performance y video para plantear diversas traducciones entre los planos intangible y concreto. Para ello, revisa problemáticas relacionadas con el arte moderno, tales como la centralidad del pensamiento sobre la forma, la atención al comportamiento de los materiales y la exploración de diversos mecanismos para la composición.
             </Paragraph>
             <StaticImage
-              src="../assets/images/abrazo/abrazo_3.JPG"
+              src="../assets/images/abrazo/abrazo_3.jpg"
               width={478}
               height={629}
               className="lg:h-629 lg:w-478"
@@ -109,7 +111,7 @@ const AbrazoPage = ({data}) => {
               className="max-w-xl mb-8 lg:mb-14"
             />
             <StaticImage
-              src="../assets/images/abrazo/abrazo_2.JPG"
+              src="../assets/images/abrazo/abrazo_2.jpg"
               width={709}
               height={630}
             />

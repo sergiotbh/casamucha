@@ -1,8 +1,8 @@
 import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 import CasaMuchaLogoWhite from "../assets/images/casamucha_horizontal_white.svg";
-import { PhotoCaption } from '../pages';
 import IconButton from './IconButton';
+import { PhotoCaption } from './TextComponents';
 
 const Footer = () => {
   return(
@@ -11,7 +11,7 @@ const Footer = () => {
         <img
           src={CasaMuchaLogoWhite}
           className="w-60 md:w-96"
-          alt="Casa Mucha"
+          alt="Logo"
         />
         <section className="md:flex py-14">
           <div className="pb-4 md:flex-grow">
@@ -29,7 +29,7 @@ const Footer = () => {
           </div>
         </section>
         <section className="flex justify-between">
-          <FooterParagraph>Aviso de privacidad | Términos y Condiciones. Copyright © 2021</FooterParagraph>
+          {/* <FooterParagraph>Aviso de privacidad | Términos y Condiciones. Copyright © 2021</FooterParagraph> */}
           <section className="">
             <IconButton
               type="instagram"

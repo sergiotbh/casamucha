@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { PageSubtitle, PageTitle, Paragraph, PhotoCaption } from './index';
+import { PageSubtitle, PageTitle, Paragraph, PhotoCaption } from '../components/TextComponents';
 import Layout from '../components/Layout';
 import { StaticImage } from 'gatsby-plugin-image';
 import Aos from "aos";
@@ -16,7 +16,7 @@ const BarrioPage = ({data}) => {
   }, [])
 
   return(
-    <Layout noHero>
+    <Layout noHero title="El Barrio" description="Casa Mucha es parte de una comunidad que mezcla la calidez tapatía con las ideas contemporáneas.">
       <section className="grid grid-cols-1 md:grid-cols-6 gap-4 md:gap-5 md:ml-32 pt-20 px-4 md:px-0 md:pt-32">
         <section className="col-span-2 md:col-span-3">
           <PageTitle customStyle="my-10">Nuestro barrio es el corazón de Guadalajara.</PageTitle>

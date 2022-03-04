@@ -1,43 +1,18 @@
+import React, { useEffect } from "react"
 import { graphql, Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
-import React, { useEffect } from "react"
 import HeroBanner from "../components/HeroBanner";
 import Layout from "../components/Layout";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import MuchasLogo from '../assets/images/muchas_logo.svg'
 import CasaMuchaLogoWhite from '../assets/images/casamucha_horizontal_white.svg';
-import RecepcionLogo from '../assets/images/la_recepcion_logo.svg';
-import SalonLogo from '../assets/images/el_salon_logo.svg';
+import RecepcionLogo from '../assets/images/recepcion_logo.svg';
+import SalonLogo from '../assets/images/salon_logo.svg';
 import RinTinTinLogo from '../assets/images/rintintin_logo.svg'
+import { PageTitle, Paragraph } from "../components/TextComponents";
 
-const partners = [
-  {
-    name: "La Recepción",
-    logo: RecepcionLogo,
-    link: "/la-recepcion"
-  },
-  {
-    name: "Muchas",
-    logo: MuchasLogo,
-    link: "/muchas"
-  },
-  {
-    name: "Rin Tin Tin",
-    logo: RinTinTinLogo,
-    link: "https://www.instagram.com/caferintintin"
-  },
-  {
-    name: "El Salón",
-    logo: SalonLogo,
-  },
-  {
-    name: "Abrazo",
-    link: "/abrazo"
-  }
-]
-
-export default function Home({data}) {
+function Home({data}) {
 
   useEffect(() => {
     Aos.init({
@@ -64,6 +39,7 @@ export default function Home({data}) {
           <StaticImage
             src="../assets/images/casa_mucha_home_graphic_01.jpg"
             width={609}
+            height={500}
           />
         </div>
         <div className="flex flex-col justify-center md:col-span-4 px-6 py-11" data-aos="fade-right">
@@ -92,62 +68,47 @@ export default function Home({data}) {
           src="../assets/images/casa_mucha_home_square.jpg"
           width={225}
           height={225}
-          className="margin-auto rounded-full transform lg:-translate-y-40 shadow-md"
+          className="margin-auto rounded-full lg:-translate-y-40 shadow-md"
           aspectRatio={1}
         />
       </section>
-      <section className="flex flex-wrap justify-center items-center pt-16 px-10 lg:px-44 py-11 bg-brown-200 bg-opacity-15">
-        {
-          partners.map((v, i) => v.link && v.link.includes('http') ? (
-            <a href={v.link} target='_blank' key={i} className="w-full md:w-1/2 lg:w-1/3 px-3 items-center">
-              {
-              v.logo ? 
-                <img
-                  src={v.logo}
-                  alt=""
-                /> :
-                <h3 className="text-6xl leading-loose tracking-wide text-brown-500 font-serif text-center">{v.name}</h3>
-              }
-            </a>
-          ) : (
-            <Link to={v.link} className="w-full md:w-1/2 lg:w-1/3 px-3 items-center">
-              {
-              v.logo ? 
-                <img
-                  src={v.logo}
-                  alt=""
-                /> :
-                <h3 className="text-6xl leading-loose tracking-wide text-brown-500 font-serif text-center">{v.name}</h3>
-              }
-            </Link>
-          ))
-        }
+      <section className="flex flex-wrap justify-center md:justify-between items-center pt-16 py-11 px-14 xl:px-32 bg-brown-200 bg-opacity-15">
+        <Link to="/la-recepcion" className=" lg:py-2 lg:px-4 px-10 py-12 items-center">
+          <img
+            src={RecepcionLogo}
+            alt=""
+            height={20}
+            width={150}
+          />
+        </Link>
+        <Link href="/muchas" className=" px-12 py-12 lg:px-2 lg:py-2 items-center">
+          <img
+            src={MuchasLogo}
+            alt=""
+            height={20}
+            width={150}
+          />
+        </Link>
+        <a href="https://www.instagram.com/caferintintin" target="_blank" rel="noreferrer" className="px-12 py-12 lg:px-2 lg:py-2 justify-center items-center">
+          <img
+            src={RinTinTinLogo}
+            alt=""
+            height={20}
+            width={150}
+          />
+        </a>
+        <a href="/el-salon" className="px-10 py-10 lg:px-4 lg:py-2 justify-center items-center">
+          <img
+            src={SalonLogo}
+            alt=""
+            height={20}
+            width={105}
+          />
+        </a>
       </section>
     </Layout>
   )
 }
-
-export const PageTitle = ({children, customStyle}) => (
-  <h1 className={`font-serif text-brown-300 text-4xl text-center md:text-left lg:text-7xl leading-tight tracking-wider ${customStyle}`}>{children}</h1>
-)
-
-export const PageSubtitle = ({children, customStyle}) => (
-  <h2 className={`font-sans text-2xl lg:text-4xl tracking-normal leading-snug font-light text-brown-300 ${customStyle}`}>
-    {children}
-  </h2>
-)
-
-export const Paragraph = ({children, customStyle, alignParagraph}) => (
-  <p
-    className={`${alignParagraph ? 'text-left' : 'text-center'} text-sm md:text-base text-brown-600 font-light leading-loose tracking-wide ${customStyle}`}
-  >
-    {children}
-  </p>
-)
-
-export const PhotoCaption = ({children, dark, customStyle}) => (
-  <h6 className={`${customStyle} ${dark ? 'text-gray-300' : 'text-brown-600'} z-40 italic text-xs md:text-sm`}>{children}</h6>
-)
 
 export const query = graphql`
   query{
@@ -170,3 +131,5 @@ export const query = graphql`
     }
   }
 `;
+
+export default Home;

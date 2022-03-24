@@ -18,10 +18,10 @@ const menuLinks = [
     name: 'Muchas',
     link: '/muchas'
   },
-  {
-    name: 'La Recepción',
-    link: '/la-recepcion'
-  },
+  // {
+  //   name: 'La Recepción',
+  //   link: '/la-recepcion'
+  // },
   {
     name: 'Abrazo',
     link: '/abrazo'

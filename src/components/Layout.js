@@ -41,9 +41,9 @@ const Layout = ({children, noHero, title, url, description}) => {
 
   return(
     <main className="bg-white-background">
-     {isBrowser && window.innerWidth > 375 && <Background
+      <Background
         offsetY={offsetY}
-      />}
+      />
       <Helmet>
         <meta name="description" content={seo.description} />
         <meta name="image" content={seo.image} />
@@ -56,7 +56,6 @@ const Layout = ({children, noHero, title, url, description}) => {
       <div className="relative">
         {children}
       </div>
-        
       <Footer/>
     </main>
   )
@@ -65,7 +64,7 @@ const Layout = ({children, noHero, title, url, description}) => {
 const Background = ({offsetY}) => {
   
   return (
-    <div className="absolute top-0 w-full z-0" style={{height: '100%', maxWidth: '100vw'}}>
+    <div className="xs:hidden absolute top-0 w-full z-0" style={{height: '100%', maxWidth: '100vw'}}>
       <div className="absolute w-96 h-96 bg-texture-4 bg-contain bg-no-repeat opacity-70 top-40 -left-4"
         style={{
           transform: `translateY(${offsetY * 0.7}px)`

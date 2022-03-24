@@ -2,6 +2,9 @@ module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
+      screens: {
+        xs: { 'raw': '(max-width: 374px)' },
+      },
       colors: {
         grayBackground: '#faf9f5',
         white: {

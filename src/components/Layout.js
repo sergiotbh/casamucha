@@ -65,28 +65,28 @@ const Background = ({offsetY}) => {
   
   return (
     <div className="xs:hidden absolute top-0 w-full z-0" style={{height: '100%', maxWidth: '100vw'}}>
-      <div className="absolute w-96 h-96 bg-texture-4 bg-contain bg-no-repeat opacity-70 top-40 -left-4"
+      <div className="absolute w-72 h-72 md:w-1/2 md:h-1/2 bg-texture-4 bg-contain bg-no-repeat opacity-70 -bottom-1/4 md:top-40 md:-left-4"
         style={{
           transform: `translateY(${offsetY * 0.7}px)`
         }}
       />
-      <div className="absolute w-56 h-56 bg-texture-1 bg-contain bg-no-repeat opacity-20 -top-36 left-20 lg:left-52"/>
+      <div className="absolute w-56 h-56 bg-texture-1 bg-contain bg-no-repeat opacity-20 -top-24 left-20 lg:left-52"/>
       <div className="absolute w-56 h-56 bg-texture-2 bg-contain bg-no-repeat opacity-60 bottom-1/3 lg:bottom-1/4 right-20"
         style={{
           transform: `translateY(${offsetY * 0.6}px)`
         }}
       />
-      <div className="absolute w-24 h-24 bg-texture-3 bg-contain bg-no-repeat opacity-90 bottom-1/3 lg:bottom-14 right-14"
+      <div className="absolute w-24 h-24 bg-texture-3 bg-contain bg-no-repeat opacity-90 bottom-1/3 lg:bottom-10 right-14"
         style={{
           transform: `translateY(${offsetY * 0.2}px)`
         }}
       />
-      <div className="absolute w-1/3 h-1/3 bg-texture-5 bg-contain bg-no-repeat opacity-30 bottom-48 -left-60"
+      <div className="absolute w-1/3 h-1/3 bg-texture-5 bg-contain bg-no-repeat opacity-30 -bottom-36 -left-24"
         style={{
           transform: `translateY(${offsetY * 0.8}px)`
         }}
       />
-      <div className="absolute w-1/4 h-1/4 bg-texture-6 bg-contain bg-no-repeat opacity-10 bottom-48 right-10"
+      <div className="absolute w-40 h-40 md:w-1/2 md:h-1/2 bg-texture-6 bg-contain bg-no-repeat opacity-10 bottom-48 right-0"
         style={{
           transform: `translateY(${offsetY * 0.8}px)`
         }}

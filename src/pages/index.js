@@ -5,11 +5,9 @@ import HeroBanner from "../components/HeroBanner";
 import Layout from "../components/Layout";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import MuchasLogo from '../assets/images/muchas_logo.svg'
 import CasaMuchaLogoWhite from '../assets/images/casamucha_horizontal_white.svg';
-import RecepcionLogo from '../assets/images/recepcion_logo.svg';
-import SalonLogo from '../assets/images/salon_logo.svg';
 import RinTinTinLogo from '../assets/images/rintintin_logo.svg'
+import OficiosLogo from '../assets/images/oficios_logo.svg'
 import { PageTitle, Paragraph } from "../components/TextComponents";
 
 function Home({data}) {
@@ -72,23 +70,7 @@ function Home({data}) {
           aspectRatio={1}
         />
       </section>
-      <section className="flex flex-wrap justify-center md:justify-between items-center pt-16 py-11 px-14 xl:px-32 bg-brown-200 bg-opacity-15">
-        <Link to="/la-recepcion" className=" lg:py-2 lg:px-4 px-10 py-12 items-center">
-          <img
-            src={RecepcionLogo}
-            alt=""
-            height={20}
-            width={150}
-          />
-        </Link>
-        <Link href="/muchas" className=" px-12 py-12 lg:px-2 lg:py-2 items-center">
-          <img
-            src={MuchasLogo}
-            alt=""
-            height={20}
-            width={150}
-          />
-        </Link>
+      <section className="flex flex-wrap justify-evenly items-center pt-16 py-11 px-14 xl:px-32 bg-brown-200 bg-opacity-15">
         <a href="https://www.instagram.com/caferintintin" target="_blank" rel="noreferrer" className="px-12 py-12 lg:px-2 lg:py-2 justify-center items-center">
           <img
             src={RinTinTinLogo}
@@ -97,12 +79,12 @@ function Home({data}) {
             width={150}
           />
         </a>
-        <a href="/el-salon" className="px-10 py-10 lg:px-4 lg:py-2 justify-center items-center">
+        <a href="https://www.instagram.com/oficios_mx" target="_blank" rel="noreferrer" className="px-12 py-12 lg:px-2 lg:py-2 justify-center items-center">
           <img
-            src={SalonLogo}
+            src={OficiosLogo}
             alt=""
             height={20}
-            width={105}
+            width={150}
           />
         </a>
       </section>
